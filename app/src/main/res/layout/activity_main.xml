@@ -6,14 +6,63 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <View
+        android:id="@+id/topBack"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bac_onboard_rectangle"
+        app:layout_constraintDimensionRatio="3:3.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logoImg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/image"
+        app:layout_constraintBottom_toBottomOf="@id/topBack"
+        app:layout_constraintDimensionRatio="3:3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Do your exam test and\n get the best score"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+        android:textColor="#0A1042"
+        android:textSize="22dp"
+        app:layout_constraintTop_toBottomOf="@id/logoImg" />
+
+
     <Button
         android:id="@+id/showNotification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Show notification"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bac_start_btn_rectangle"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="Get Started"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
